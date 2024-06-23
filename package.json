@@ -1,6 +1,7 @@
 {
   "name": "backend2",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend de Distriboncar",
   "main": "index.js",
   "scripts": {
