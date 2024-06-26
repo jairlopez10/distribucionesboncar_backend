@@ -8,7 +8,7 @@ const enviarpedido = async (req, res) => {
         await enviarpedidoinfo(pedidoinfo);
         res.json({msg: 'Pedido agregado al Sheets'})
     } catch (error) {
-        
+        console.log(error)
     }
     
 }
