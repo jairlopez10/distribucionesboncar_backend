@@ -4,7 +4,7 @@ const enviarpedidoinfo = async (pedidoinfo) => {
 
     const {cliente, origen, fecha, productos, productostext, ciudad, direccion, telefono, total} = pedidoinfo
 
-    
+    /*
     const client = await new google.auth.JWT(
         process.env.GOOGLE_CLIENT_EMAIL,
         null,
@@ -13,13 +13,13 @@ const enviarpedidoinfo = async (pedidoinfo) => {
     )
 
     const sheets = await google.sheets({version: 'v4', auth: client});
+    */
     
-    /*
     const auth = await google.auth.getClient({
         scopes: ['https://www.googleapis.com/auth/spreadsheets']
     })
     
-    const sheets = google.sheets({version: 'v4', auth});*/
+    const sheets = google.sheets({version: 'v4', auth});
 
     const rangenextrow = 'Settings!A2'
 
