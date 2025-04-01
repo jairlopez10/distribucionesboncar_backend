@@ -3,17 +3,6 @@ import { google } from 'googleapis'
 const enviarpedidoinfo = async (pedidoinfo) => {
 
     const {cliente, origen, fecha, productos, productostext, ciudad, direccion, telefono, total} = pedidoinfo
-
-    /*
-    const client = await new google.auth.JWT(
-        process.env.GOOGLE_CLIENT_EMAIL,
-        null,
-        process.env.GOOGLE_PRIVATE_KEY,
-        ['https://www.googleapis.com/auth/spreadsheets']
-    )
-
-    const sheets = await google.sheets({version: 'v4', auth: client});
-    */
     
     const auth = await google.auth.getClient({
         scopes: ['https://www.googleapis.com/auth/spreadsheets']
