@@ -2,7 +2,7 @@ import { google } from 'googleapis'
 
 const enviarpedidoinfo = async (pedidoinfo) => {
 
-    const {cliente, origen, fecha, productos, productostext, ciudad, direccion, telefono, total} = pedidoinfo
+    const {cliente, origen, fecha, cedula, productos, productostext, ciudad, direccion, telefono, total} = pedidoinfo
     
     const auth = await google.auth.getClient({
         scopes: ['https://www.googleapis.com/auth/spreadsheets']
@@ -26,7 +26,7 @@ const enviarpedidoinfo = async (pedidoinfo) => {
         range,
         valueInputOption: 'USER_ENTERED',
         resource: {
-            values: [[cliente, productostext, origen, fecha, ciudad, direccion, telefono, " ", total]]
+            values: [[cliente, productostext, origen, fecha, ciudad, direccion, telefono, cedula, total]]
         }
     })
 
